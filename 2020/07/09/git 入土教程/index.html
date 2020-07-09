@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>标签页显示</title>
+	<meta charset="utf-8">
+
+	<!-- 引入配置文件 -->
+	
+<link rel="stylesheet" href="/css/main.css">
+
+
+	<!-- 字体图片库 -->
+	
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+	<!-- 代码高亮库 -->
+	
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+
+	
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+
+	<div id="main">
+		<!-- 引入侧边栏 -->
+		<aside>
+			<!-- 搜索栏 -->
+<div id="search">
+	<input class="search-input" type="text" placeholder="search">
+	<i id="search-icon" class="fa fa-bars" title="切换目录与索引">
+</div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+	
+
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/Markdown速成/">
+								<i class="fa fa-file"></i>
+								Markdown速成
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file active">
+							<a href="/2020/07/09/git 入土教程/">
+								<i class="fa fa-file"></i>
+								git 入土教程
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/hello-world/">
+								<i class="fa fa-file"></i>
+								hello-world
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/hexo-zerotohero/">
+								<i class="fa fa-file"></i>
+								hexo-zerotohero
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/mudel/">
+								<i class="fa fa-file"></i>
+								mudel
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/粗通 MATLAB R2020/">
+								<i class="fa fa-file"></i>
+								粗通 MATLAB R2020
+							</a>
+						</li>
+					</ul>
+	
+</div>
+
+
+<!-- 最尾部添加，这里就不列以前的代码了 -->
+<div id="toc" style="display: none;"></div>
+
+		</aside>
+
+		<!-- 引入导航 -->
+		<nav>
+			<ul id="menu">
+	
+	
+    <li class="menu-item">
+        <a href="/" class="menu-item-link">回到主页</a>
+    </li>
+    
+
+</ul>
+
+		</nav>
+
+		<!-- 引入正文 -->
+		<div id="content">
+			<div>
+	<span id="post-author"></span>
+	<span id="post-date">2020-07-09 17:26:11</span>
+</div>
+
+<div id="article">
+	<h1 id="git-入土教程"><a href="#git-入土教程" class="headerlink" title="git 入土教程"></a>git 入土教程</h1><h2 id="1-git-结构"><a href="#1-git-结构" class="headerlink" title="1. git 结构"></a>1. git 结构</h2><h4 id="工作区：本地磁盘目录"><a href="#工作区：本地磁盘目录" class="headerlink" title="工作区：本地磁盘目录"></a>工作区：本地磁盘目录</h4><h4 id="暂存区：虚拟仓库"><a href="#暂存区：虚拟仓库" class="headerlink" title="暂存区：虚拟仓库"></a>暂存区：虚拟仓库</h4><figure class="highlight plain"><figcaption><span>git init```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化在本地建立一个 &#96;.git&#96; 目录的暂存区。</span><br><span class="line"></span><br><span class="line">工作区 -&gt; 暂存区</span><br></pre></td></tr></table></figure>
+<p>git add 文件名<br>git add * 提交所有文件</p>
+<p>git commit -m “这一次提交的描述”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查看当前工作区状态：&#96;&#96;&#96;git status</span><br></pre></td></tr></table></figure>
+
+<p>如果回复 <code>nothing to commit, working tree clean</code>就成功了。</p>
+<p>修改文件后再次用 <code>git status</code> 查询，会提示有修改。</p>
+<p><code>git log</code> 查看所有提交记录</p>
+<p><code>git reset --hard 版本号（log查询的）</code> 恢复到指定版本</p>
+<h4 id="远程仓库：GitHub"><a href="#远程仓库：GitHub" class="headerlink" title="远程仓库：GitHub"></a>远程仓库：GitHub</h4><p>暂存区提交到远程仓库，需要先设置 SSH 密钥。</p>
+<p><code>ssh-keygen -t rsa -C &quot;git邮箱&quot;</code></p>
+<p>复制密钥到 GitHub</p>
+<p>查看远程仓库：<code>git remote -v</code></p>
+<p>提交到远程仓库：<code>git push -u origin master</code>。如果需要强制提交，在后面加上 <code>-f</code>。</p>
+<p>从远程仓库克隆到本地：<code>git clone</code>，这个操作不需要 <code>git init</code>，但会让你输入账号密码。</p>
+<p>从远程仓库更新到本地：<code>git pull</code>，需要本地新建一个 git 库。</p>
+<h2 id="2-git-的坑"><a href="#2-git-的坑" class="headerlink" title="2. git 的坑"></a>2. git 的坑</h2><h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><p>查看当前是否有使用代理</p>
+<p><code>$ git config --global http.proxy</code></p>
+<p>如果返回了端口，而代理已经关闭，则取消</p>
+<p><code>$ git config --global --unset http.proxy</code></p>
+<p>如果需要使用代理，则复制计算机端口配置</p>
+<p><code>git config --global http.proxy http://地址:端口</code></p>
+<h4 id="凡事不成，找-控制面板，删钥匙。"><a href="#凡事不成，找-控制面板，删钥匙。" class="headerlink" title="凡事不成，找 控制面板，删钥匙。"></a>凡事不成，找 <code>控制面板</code>，删钥匙。</h4>
+</div>
+
+		</div>
+		
+	</div>
+
+	<!-- 引入代码高亮的 js -->
+	
+<script src="/lib/highlight/highlight.pack.js"></script>
+
+
+	<!-- 引入 jquery -->
+	
+<script src="/lib/jquery-3.4.1.min.js"></script>
+
+
+	<!-- 引入 pjax -->
+	
+<script src="/lib/jquery.pjax.js"></script>
+
+	
+	<!-- 引入 js 文件 -->
+	
+<script src="/js/main.js"></script>
+
+
+	<script type="text/javascript">
+	L2Dwidget.init();
+	</script>
+
+</body>
+</html>
