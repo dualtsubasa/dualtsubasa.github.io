@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>标签页显示</title>
+	<title>IT Abyss Wiki</title>
 	<meta charset="utf-8">
 
 	<!-- 引入配置文件 -->
@@ -118,14 +118,32 @@
         <a href="/" class="menu-item-link">主页</a>
     </li>
     
+    <li class="menu-item">
+        <a href="/about" class="menu-item-link">关于</a>
+    </li>
+    
+
+    
+    
+    <li class="menu-item">
+        <a href="https://www.cnblogs.com/yyhh/" class="menu-item-link" target="_blank">博客园</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="https://github.com" class="menu-item-link" target="_blank">github</a>
+    </li>
+    
 
 </ul>
 
 		</nav>
 
 		<!-- 引入正文 -->
-		<div id="content">，
-			
+		<div id="content">
+			<div>
+	<span id="post-author">猴子请来的救兵</span>
+	<span id="post-date">2020-07-09 17:26:08</span>
+</div>
 
 <div id="article">
 	<h1 id="1-绘图"><a href="#1-绘图" class="headerlink" title="1. 绘图"></a>1. 绘图</h1><h2 id="1-1-通用"><a href="#1-1-通用" class="headerlink" title="1.1 通用"></a>1.1 通用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">set(gca,&#39;YLim&#39;,[0,1],&#39;YTick&#39;,0:0.2:1)</span><br><span class="line">set(gca,&#39;yscale&#39;,&#39;log&#39;)</span><br><span class="line">set(gca, &#39;Fontname&#39;, &#39;Times New Roman&#39;, &#39;Fontsize&#39;, 10,&#39;LineWidth&#39;,1);</span><br><span class="line">set(gca,&#39;xtick&#39;,[],&#39;ytick&#39;,[]);</span><br><span class="line">set(x1,&#39;Rotation&#39;,22);  % 旋转label</span><br><span class="line">axis square;</span><br><span class="line">grid on</span><br><span class="line">legend(&#39;1&#39;, &#39;2&#39;);</span><br><span class="line">text(0.009,0.002,&#39;z &#x3D; 60m&#39;)</span><br><span class="line"></span><br><span class="line">set(gca,&#39;YTickLabel&#39;,&#123;&#39;0&#39;,&#39;0.2&#39;,&#39;0.4&#39;,&#39;0.6&#39;,&#39;0.8&#39;,&#39;1&#39;&#125;)</span><br><span class="line">% 大写小写都可以</span><br><span class="line">set(gca,&#39;xticklabel&#39;,get(gca,&#39;xtick&#39;),&#39;yticklabel&#39;,get(gca,&#39;ytick&#39;));  </span><br><span class="line">% 使刻度坐标显示为刻度数值，有取消科学记数法显示的作用</span><br><span class="line"></span><br><span class="line">set(gca,&#39;DataAspectRatio&#39;,[1,1,1])</span><br><span class="line">% 刻度的长度比例 [x,y,z]</span><br><span class="line"></span><br><span class="line">set(gca,&#39;xdir&#39;,&#39;reverse&#39;)</span><br><span class="line">% 坐标轴反向</span><br></pre></td></tr></table></figure>
@@ -159,6 +177,7 @@
 <script src="/js/main.js"></script>
 
 
+	<script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
 	<script type="text/javascript">
 	L2Dwidget.init();
 	</script>
