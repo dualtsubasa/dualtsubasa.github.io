@@ -38,36 +38,9 @@
 	
 					<ul>
 						<li class="file">
-							<a href="/2020/07/09/Markdown速成/">
-								<i class="fa fa-file"></i>
-								Markdown速成
-							</a>
-						</li>
-					</ul>
-	
-					<ul>
-						<li class="file">
-							<a href="/2020/07/09/git 入土教程/">
-								<i class="fa fa-file"></i>
-								git 入土教程
-							</a>
-						</li>
-					</ul>
-	
-					<ul>
-						<li class="file">
 							<a href="/2020/07/09/hello-world/">
 								<i class="fa fa-file"></i>
 								hello-world
-							</a>
-						</li>
-					</ul>
-	
-					<ul>
-						<li class="file">
-							<a href="/2020/07/09/hexo-zerotohero/">
-								<i class="fa fa-file"></i>
-								hexo-zerotohero
 							</a>
 						</li>
 					</ul>
@@ -82,12 +55,50 @@
 					</ul>
 	
 					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								技术博客
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/技术博客/Markdown速成/">
+								<i class="fa fa-file"></i>
+								Markdown速成
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/技术博客/git 入土教程/">
+								<i class="fa fa-file"></i>
+								git 入土教程
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/07/09/技术博客/hexo-zerotohero/">
+								<i class="fa fa-file"></i>
+								hexo-zerotohero
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
 						<li class="file active">
-							<a href="/2020/07/09/粗通 MATLAB R2020/">
+							<a href="/2020/07/09/技术博客/粗通 MATLAB R2020/">
 								<i class="fa fa-file"></i>
 								粗通 MATLAB R2020
 							</a>
 						</li>
+					</ul>
+	
+						</li>
+						
 					</ul>
 	
 </div>
@@ -104,7 +115,7 @@
 	
 	
     <li class="menu-item">
-        <a href="/" class="menu-item-link">回到主页</a>
+        <a href="/" class="menu-item-link">主页</a>
     </li>
     
 
@@ -113,11 +124,8 @@
 		</nav>
 
 		<!-- 引入正文 -->
-		<div id="content">
-			<div>
-	<span id="post-author"></span>
-	<span id="post-date">2020-07-09 17:26:08</span>
-</div>
+		<div id="content">，
+			
 
 <div id="article">
 	<h1 id="1-绘图"><a href="#1-绘图" class="headerlink" title="1. 绘图"></a>1. 绘图</h1><h2 id="1-1-通用"><a href="#1-1-通用" class="headerlink" title="1.1 通用"></a>1.1 通用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">set(gca,&#39;YLim&#39;,[0,1],&#39;YTick&#39;,0:0.2:1)</span><br><span class="line">set(gca,&#39;yscale&#39;,&#39;log&#39;)</span><br><span class="line">set(gca, &#39;Fontname&#39;, &#39;Times New Roman&#39;, &#39;Fontsize&#39;, 10,&#39;LineWidth&#39;,1);</span><br><span class="line">set(gca,&#39;xtick&#39;,[],&#39;ytick&#39;,[]);</span><br><span class="line">set(x1,&#39;Rotation&#39;,22);  % 旋转label</span><br><span class="line">axis square;</span><br><span class="line">grid on</span><br><span class="line">legend(&#39;1&#39;, &#39;2&#39;);</span><br><span class="line">text(0.009,0.002,&#39;z &#x3D; 60m&#39;)</span><br><span class="line"></span><br><span class="line">set(gca,&#39;YTickLabel&#39;,&#123;&#39;0&#39;,&#39;0.2&#39;,&#39;0.4&#39;,&#39;0.6&#39;,&#39;0.8&#39;,&#39;1&#39;&#125;)</span><br><span class="line">% 大写小写都可以</span><br><span class="line">set(gca,&#39;xticklabel&#39;,get(gca,&#39;xtick&#39;),&#39;yticklabel&#39;,get(gca,&#39;ytick&#39;));  </span><br><span class="line">% 使刻度坐标显示为刻度数值，有取消科学记数法显示的作用</span><br><span class="line"></span><br><span class="line">set(gca,&#39;DataAspectRatio&#39;,[1,1,1])</span><br><span class="line">% 刻度的长度比例 [x,y,z]</span><br><span class="line"></span><br><span class="line">set(gca,&#39;xdir&#39;,&#39;reverse&#39;)</span><br><span class="line">% 坐标轴反向</span><br></pre></td></tr></table></figure>
